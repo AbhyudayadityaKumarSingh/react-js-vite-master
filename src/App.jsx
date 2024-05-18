@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ListView from './components/ListView.jsx';
 import ProductView from './components/ProductView.jsx';
-import './App.css'; // Import your Tailwind CSS or other styles
+import './App.css'; // Make sure you have your styles
 
 const App = () => {
   const [selectedBreed, setSelectedBreed] = useState(null);
@@ -13,7 +13,7 @@ const App = () => {
         <button onClick={() => setSelectedBreed(null)}>Home</button>
       </nav>
       {selectedBreed ? (
-        <ProductView breedId={selectedBreed.id} onBack={() => setSelectedBreed(null)} />
+        <ProductView breed={selectedBreed} onBack={() => setSelectedBreed(null)} />
       ) : (
         <ListView onSelectBreed={setSelectedBreed} />
       )}

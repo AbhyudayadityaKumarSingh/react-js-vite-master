@@ -47,7 +47,7 @@ const ListView = ({ onSelectBreed }) => {
           className="card"
           onClick={() => onSelectBreed(breed)}
         >
-          <img src={breed.image.url} alt={breed.name} />
+          <img src={breed.image?.url} alt={breed.name} />
           <h2>{breed.name}</h2>
           <p>{breed.bred_for}</p>
         </div>
